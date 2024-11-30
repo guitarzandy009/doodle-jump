@@ -52,10 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function jump() {
+        clearInterval(downTimerId)
         upTimerId = setInterval(function (){
             doodlerBottomSpace += 20
             doodler.style.bottom = doodlerBottomSpace + 'px'
+            if(doodlerBottomSpace > 350) {
+                fall()
+            }
         }, 30) 
+    }
+
+    function fall() {
+        clearInterval(upTimerId)
+        downTimerId = setInterval(function () {
+            doodlerBottomSpace -= 5
+            doodler.style.bottom = doodlerBottomSpace + 'px'
+        }, 30)
     }
 
 
@@ -72,4 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 })
-// Timestamp 24:00 
+// Timestamp 25:50 
