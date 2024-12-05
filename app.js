@@ -155,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // assign functions to keyCodes
     function control(e) {
+        doodler.style.bottom = doodlerBottomSpace + 'px'
         if (e.key === "ArrowLeft") {
             moveLeft()
         } else if (e.key === "ArrowRight") {
@@ -187,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             createPlatforms()
             createDoodler()
             setInterval(movePlatforms,30)
-            jump()
+            jump(startPoint)
             document.addEventListener('keyup', control)
         }            
 
@@ -197,4 +198,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 })
-// Timestamp 46:00 
+
