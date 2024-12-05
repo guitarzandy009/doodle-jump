@@ -1,3 +1,6 @@
+#Doodle Jump Game
+##As taught by Ania Kubow on her youtube channel.
+
 Images sourced from (https://github.com/kubowania/Doodle-Jump).
 Doodle Jump clone in JavaScript, HTML and CSS
 
